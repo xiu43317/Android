@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>crossover</title>
+</head>
+
+<body>
+    <div id="gamestart">
+        <br>
+        <br>
+        <br>
+        <br>PRESS START</div>
+    <!-- 開始畫面 -->
+    <div id="gamepause">
+        <br>
+        <br>
+        <br>
+        <br>PAUSE</div>
+    <!-- 暫停圖示 -->
+    <img id="goodjob" src="img/goodjob.jpg">
+    <!-- 過關圖片 -->
+    <img id="uccu" src="img/funny2.jpg">
+    <!-- 失敗圖片 -->
+    <div id="frame">
+        <!-- 外框架 -->
+        <img id="frog" src="img/frog.png" style="position:absolute; width:35px;" class="TurnH">
+        <img id="long" src="img/longcar.png" style="width:240px;height:100px;position:absolute;">
+        <img id="taxi" src="img/taxi.png" style="width:160px;height:100px;position:absolute;">
+        <img id="sportscar" src="img/sportscar.png" style="width:200px;height:100px;position:absolute;">
+        <img id="car" src="img/newcar.png" style="width:160px;height:100px;position:absolute;">
+        <img id="car2" src="img/newcar2.png" style="width:160px;height:100px;position:absolute;">
+        <img id="jeep" src="img/newjeep.png" style="width:160px;height:100px;position:absolute;">
+        <img id="lorry" src="img/newlorry.png" style="width:160px;height:100px;position:absolute;">
+        <img id="suv" src="img/suv2.png" style="width:160px;height:100px;position:absolute;">
+        <img id="van" src="img/newvan.png" style="width:160px;height:100px;position:absolute;">
+        <img id="truck" src="img/truck.png" style="width:160px;height:100px;position:absolute;">
+        <img id="formula" src="img/newformula.png" style="width:200px;height:100px;position:absolute;">
+        <img id="black" src="img/blackcar.png" style="width:200px;height:100px;position:absolute;">
+        <div id="goal"></div>
+        <!-- 抵達區域 -->
+        <div id="road"></div>
+        <!-- 馬路 -->
+        <div id="strip">
+            <div id="begin"></div>
+            <!-- 馬路分隔線 -->
+            <div id="gray" style="left:130px;"></div>
+            <div id="gray" style="left:290px;"></div>
+            <div id="gray" style="left:450px;"></div>
+            <div id="gray" style="left:610px;"></div>
+            <div id="gray" style="left:770px;"></div>
+            <div id="end" style="left:930px;"></div>
+        </div>
+        <div id="road"></div>
+        <div id="tree"></div>
+        <div id="road"></div>
+        <div id="strip">
+            <div id="begin"></div>
+            <!-- 馬路分隔線 -->
+            <div id="gray" style="left:130px;"></div>
+            <div id="gray" style="left:290px;"></div>
+            <div id="gray" style="left:450px;"></div>
+            <div id="gray" style="left:610px;"></div>
+            <div id="gray" style="left:770px;"></div>
+            <div id="end" style="left:930px;"></div>
+        </div>
+        <div id="road"></div>
+        <div id="start"></div>
+        <!-- 起點 -->
+    </div>
+    <div id="click">
+        <button id="btn1" onclick="start('start');playSound()">Start</button>
+        <button id="btn2" onclick="start('continue');playSound()">Normal</button>
+        <button id="btn3" onclick="start('fast');playSound()">Faster</button>
+        <button id="btn4" onclick="pause();playSound()">Pause</button>
+        <button id="btn5" onclick="again();playSound()">Reset</button>
+    </div>
+    <!-- 開始 暫停 重來按鈕 -->
+    <div id="hidden">
+        <br>
+        <br>青
+        <p>蛙</p>
+        <p>過</p>
+        <p>馬</p>
+        <p>路</p>
+    </div>
+    <!-- 蓋掉重複顯示車輛 -->
+    <div id="leftborder"></div>
+    <!-- 左邊邊線蓋掉車輛 -->
+    <audio id="clicks">
+        <source src="Sound/013.WAV" type="audio/ogg">
+            <source src="Sound/013.WAV" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio id="rush" controls>
+        <source src="Sound/ChinaBlue.mp3" type="audio/ogg">
+            <source src="ChinaBlue.mp3" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio id="extreme" controls>
+        <source src="Sound/極速.mp3" type="audio/ogg">
+            <source src="Sound/極速.mp3" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio id="keyboard">
+        <source src="Sound/key.wav" type="audio/ogg">
+            <source src="Sound/key.wav" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio id="laugh">
+        <source src="Sound/laugh.mp3" type="audio/ogg">
+            <source src="Sound/laugh.mp3" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio id="FF7">
+        <source src="Sound/FF7.mp3" type="audio/ogg">
+            <source src="Sound/FF7.mp3" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio id="apple" controls>
+        <source src="Sound/apple.mp3" type="audio/ogg">
+            <source src="Sound/apple.mp3" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <audio controls>
+        <source src="Sound/看上她.mp3" type="audio/ogg">
+            <source src="Sound/看上她.mp3" type="video/ogg">
+                Your browser does not support the audio element.
+    </audio>
+    <!-- 插入音樂群 -->
+    <script src='move.js' src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css"  href="frog.css"></style>
+</body>
+
+</html>

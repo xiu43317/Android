@@ -1,0 +1,251 @@
+    body {
+        margin: 0 auto;
+        background-image: url("img/onepiece.bmp");
+    }
+    
+    #frame {
+        width: 960px;
+        height: 600px;
+        border: 3px black solid;
+        position: relative;
+    }
+    
+    #click {
+        width: 1200px;
+        text-align: center;
+        letter-spacing: 70px;
+        position: absolute;
+        top: 650px;
+    }
+    
+    button {
+        text-align: center;
+        font-size: 30px;
+        position: relative;
+        width: 150px;
+        box-shadow: 2px 10px 12px #888888;
+        border-radius: 50%;
+        background-image: url("img/bg_dot.jpg");
+    }
+    
+    #goal {
+        width: 960px;
+        height: 65px;
+        background-image: url("img/water.jpg");
+        background-size: 100%;
+        position: relative;
+    }
+    
+    #road {
+        width: 960px;
+        height: 100px;
+        background-color: gray;
+        position: relative;
+    }
+    
+    #strip {
+        width: 960px;
+        height: 10px;
+        background-color: white;
+        position: relative;
+    }
+    
+    #tree {
+        width: 960px;
+        height: 50px;
+        background-color: #AC6319;
+        border: 1px white solid;
+        position: relative;
+        background-image: url("img/bush.png");
+        background-size: 100px;
+    }
+    
+    #start {
+        width: 960px;
+        height: 65px;
+        background-image: url("img/pave.jpg");
+        background-size: 12.5%;
+        position: relative;
+    }
+    
+    #gray {
+        width: 80px;
+        height: 10px;
+        background-color: gray;
+        position: absolute;
+    }
+    
+    #begin {
+        width: 50px;
+        height: 10px;
+        background-color: gray;
+        position: absolute;
+    }
+    
+    #end {
+        width: 30px;
+        height: 10px;
+        background-color: gray;
+        position: absolute;
+    }
+    
+    #frog {
+        top: 547px;
+        left: 480px;
+        z-index: 1;
+    }
+    
+    #car {
+        top: 175px;
+        left: 740px;
+        z-index: 1;
+    }
+    
+    #car2 {
+        top: 175px;
+        left: 370px;
+        z-index: 1;
+    }
+    
+    #jeep {
+        top: 175px;
+        left: 0px;
+        z-index: 1;
+    }
+    
+    #long {
+        top: 65px;
+        left: 0px;
+        z-index: 1;
+    }
+    
+    #taxi {
+        top: 65px;
+        left: 800px;
+        z-index: 1;
+    }
+    
+    #sportscar {
+        top: 65px;
+        left: 400px;
+        z-index: 1;
+    }
+    
+    #lorry {
+        top: 435px;
+        left: 800px;
+        z-index: 1;
+    }
+    
+    #suv {
+        top: 435px;
+        left: 430px;
+        z-index: 1;
+    }
+    
+    #van {
+        top: 435px;
+        left: 60px;
+        z-index: 1;
+    }
+    
+    #truck {
+        top: 325px;
+        left: 800px;
+        z-index: 1;
+    }
+    
+    #formula {
+        top: 325px;
+        left: 400px;
+        z-index: 1;
+    }
+    
+    #black {
+        top: 325px;
+        left: 0px;
+        z-index: 1;
+    }
+    
+    #hidden {
+        left: 963px;
+        top: 0px;
+        width: 240px;
+        height: 600px;
+        border: 3px black solid;
+        position: absolute;
+        background-image: url("img/apic.jpg");
+        z-index: 2;
+        line-height: 20px;
+        font-size: 100px;
+        text-align: center;
+    }
+    
+    #leftborder {
+        left: 0px;
+        top: 0px;
+        width: 4px;
+        height: 603px;
+        position: absolute;
+        z-index: 2;
+        background-color: black;
+    }
+    
+    #gamestart {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 960px;
+        height: 600px;
+        opacity: 0.6;
+        background-color: white;
+        text-align: center;
+        font-size: 60px;
+        z-index: 3;
+    }
+    
+    #gamepause {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 960px;
+        height: 600px;
+        text-align: center;
+        color: white;
+        visibility: hidden;
+        font-size: 60px;
+        z-index: 3;
+    }
+    
+    #goodjob {
+        position: absolute;
+        left: 320px;
+        top: 200px;
+        width: 320px;
+        height: 200px;
+        text-align: center;
+        color: white;
+        visibility: hidden;
+        font-size: 60px;
+        z-index: 3;
+    }
+    
+    #uccu {
+        position: absolute;
+        border : 3px white solid;
+        left: 320px;
+        top: 200px;
+        width: 320px;
+        height: 200px;
+        text-align: center;
+        color: white;
+        visibility: hidden;
+        font-size: 60px;
+        z-index: 3;
+    }
+    
+    #clicks {
+        visibility: hidden;
+    }
+    
+    #rush {}

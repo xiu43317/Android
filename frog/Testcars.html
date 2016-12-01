@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <style type="text/css">
+    #car {
+        left: 640px;
+        /*top: 100px;*/
+        
+        z-index: 1;
+    }
+    
+    #car2 {
+        left: 320px;
+        z-index: 1;
+    }
+    
+    #jeep {
+        left: 0px;
+        z-index: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <img id="car" src="img/newcar.png" style="width:160px;height:100px;position:absolute;">
+    <img id="car2" src="img/newcar2.png" style="width:160px;height:100px;position:absolute;">
+    <img id="jeep" src="img/newjeep.png" style="width:160px;height:100px;position:absolute;">
+    <div style="position:relative;top:200px;">
+        <button onclick="start()">start</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="again()">again</button>
+    </div>
+    <script type="text/javascript">
+    var imgOP = document.getElementById("car2");
+    var car = document.getElementById("car")
+    var gameflag;
+    var game;
+
+    function start() {
+        clearInterval(gameflag);
+        clearInterval(game);
+        gameflag = setInterval("animate()", 10);
+        game = setInterval("move2()", 10);
+
+        // car.style.top = '100px';
+    }
+
+    function pause() {
+        clearInterval(gameflag);
+        clearInterval(game);
+    }
+
+    function again() {
+        clearInterval(gameflag);
+        clearInterval(game);
+        imgOP.style.top = "0px";
+        imgOP.style.left = "320px";
+        car.style.left = "640px";
+        // car.style.top = '100px';
+
+    }
+
+    function animate() {
+
+
+        var posLeft = parseInt(imgOP.style.left).toString() == "NaN" ? 0 : parseInt(imgOP.style.left);
+        //posLeft 物體位置
+
+        imgOP.style.left = (posLeft - 1) + "px";
+
+        //imgOP位置 往左移動1px;
+
+
+        if (posLeft == (parseInt(imgOP.style.width) * -1)) {
+            imgOP.style.left = document.body.clientWidth + "px";
+        }
+
+    }
+
+    function move2() {
+        var posLeft1 = parseInt(car.style.left).toString() == "NaN" ? 0 : parseInt(car.style.left);
+        car.style.left = (posLeft1 - 1) + "px";
+        if (posLeft1 == (parseInt(car.style.width) * -1)) {
+            car.style.left = document.body.clientWidth + "px";
+        }
+    }
+    </script>
+</body>
+
+</html>
