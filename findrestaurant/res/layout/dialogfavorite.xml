@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+	<TextView
+	    android:id="@+id/listDlgInfo"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#00aa33"
+	    android:padding="10sp"
+	    android:gravity="center"
+	  	android:text="@string/info"
+	    />
+
+	<TextView
+	    android:id="@+id/listDlgUpdate"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#00aaaa"
+	    android:padding="10sp"
+	    android:gravity="center"
+	  	android:text="@string/update"
+	     />
+
+	<TextView
+	    android:id="@+id/listDlgDelete"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#cc0000"
+	    android:padding="10sp"
+	    android:gravity="center"
+	  	android:text="@string/delete"
+	     />
+
+</LinearLayout>

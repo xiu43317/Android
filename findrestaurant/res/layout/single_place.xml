@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <!-- Name Label -->
+
+    <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="10dip"
+        android:text="@string/RestName"
+        android:textStyle="bold" />
+	 -->
+    <!-- Name Value -->
+
+	<LinearLayout
+	    android:layout_gravity="center"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	   	android:orientation="vertical"
+	     >
+	    <TextView
+	        android:id="@+id/tvName"
+	        android:textSize="22sp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:text="test" />
+	</LinearLayout>
+
+    <!-- Address Label -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="15dip"
+        android:text="@string/AddressWithTap"
+        android:textStyle="bold" />
+
+    <!-- Address Value -->
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Phone Number Label -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="15dip"
+        android:text="@string/PhoneWithTap"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" />
+
+    <!-- Location Value -->
+
+    <TextView
+        android:id="@+id/location"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="15dip" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/labelNote"
+            android:text="@string/Note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_toRightOf="@id/labelNote"
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:lines="3"
+			android:layout_marginLeft="3sp"
+            />
+    </RelativeLayout>
+
+    
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GoogleSearch" />
+	<Button
+	    android:id = "@+id/btnSave"
+	    android:text="@string/Add"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:onClick="addDatabase"/>
+</LinearLayout>
