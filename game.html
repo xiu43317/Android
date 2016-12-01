@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+	<title>round</title>
+	<style type="text/css">
+
+td{
+		width : 100px; 
+		height : 100px;
+	}
+
+
+	</style>
+</head>
+<body>
+<table border="1" >
+	<tr>
+		<td id="1">1</td>
+		<td id="2">2</td>
+		<td id="3">3</td>
+		<td id="4">4</td>
+	</tr>
+	<tr>
+		<td id="12">12</td>
+		<td colspan="2" rowspan="2" align="center">
+			<button style="font-size:30px;" onclick="start()">開始</button>
+		</td>
+		<td id="5">5</td>
+	</tr>
+	<tr>
+		<td id="11">11</td>
+		<td id="6">6</td>
+	</tr>
+	<tr>
+		<td id="10">10</td>
+		<td id="9">9</td>
+		<td id="8">8</td>
+		<td id="7">7</td>
+	</tr>
+</table>
+<script type="text/javascript">
+
+var i =2;var j=1; //設定i為id變數 j為少一號id變數
+var count =0; //設定count為迴圈截止變數
+var t =50; //設定t為執行迴圈頻率變數
+var end;
+
+    //設定按鍵初始值
+    function start(){ 
+    	end = parseInt(Math.random()*12+1); //設定end為第三圈漸停亂數
+    	count = 0; //迴圈重新計算
+    	t=50; //頻率重新計算
+    	change();
+    }
+
+    //執行跑格子
+	function change(){	
+	if(count<24+end){	 //迴圈至第三圈開始減速 由亂數end表示緩衝格數
+	document.getElementById(i.toString()).style.backgroundColor="blue"; //格子底色變藍色
+	i++; //每做1次i+1
+	document.getElementById(j.toString()).style.backgroundColor="white";//前一格格子底色變白色
+	j++; //每做一次j+1
+	if(i>12){                  //每當i超過12便剪掉12從1開始重算
+		i = i-12;
+	}else if(j>12){            //j一樣情況
+		j = j-12;
+	}
+	count++;  //計算圈數
+	if(count>(24+end)-7){   //當快到結束前七格開始減速
+		t=t+150;   //每次減速變慢150毫秒直到停止
+	}
+	setTimeout("change()", t); //執行迴圈
+	}				
+}
+
+	
+
+
+
+</script>
+
+</body>
+</html>
